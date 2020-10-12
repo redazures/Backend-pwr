@@ -3,7 +3,7 @@ class CreatePatients < ActiveRecord::Migration[6.0]
     create_table :patients do |t|
       t.string :name
       t.boolean :current
-      t.integer :patient_id
+      t.integer :hospital_patient_id
 
       t.timestamps
     end

@@ -10,14 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_12_004755) do
+ActiveRecord::Schema.define(version: 2020_10_12_014307) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "ledgers", force: :cascade do |t|
-    t.string "current_room"
-    t.string "description"
+    t.integer "user_id"
+    t.integer "patient_id"
+    t.integer "current_room"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -25,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_10_12_004755) do
   create_table "patients", force: :cascade do |t|
     t.string "name"
     t.boolean "current"
-    t.integer "patient_id"
+    t.integer "hospital_patient_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
