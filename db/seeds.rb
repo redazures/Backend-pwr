@@ -24,7 +24,7 @@ sick= Patient.current_patients
 
 
 sick.each do |patient|
-    Ledger.create(user_id:User.all.sample.id, patient_id:patient.id,current_room:rand(100..999),description:"#{patient.name} has entered quaratined after showing COVID symptoms")
+    Ledger.create(user_id:User.all.sample.id, patient_id:patient.id,current_room:303,description:"adminstered COVID exam and awaiting results")
 end
 
 # 10.times do 
