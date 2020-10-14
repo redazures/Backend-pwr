@@ -6,9 +6,9 @@ class LedgersController < ApplicationController
     end
 
     def update
-        binding.pry
+        # binding.pry
         ledger = Ledger.find(params[:id])
-        ledger.description
+        ledger.description= params[:description]
         ledger.save!
         render json:ledger
     end
