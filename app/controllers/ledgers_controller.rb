@@ -5,8 +5,13 @@ class LedgersController < ApplicationController
         render json:ledgers
     end
 
-    def update
+    def create
         # binding.pry
+        ledger = Ledger.create(user_id:User.all.sample.id, patient_id:params[:patient_id],current_room:params[:current_room],description:params[:description])
+        render json:ledger
+    end
+
+    def update
         ledger = Ledger.find(params[:id])
         ledger.description= params[:description]
         ledger.save!
