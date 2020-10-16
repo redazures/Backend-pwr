@@ -9,4 +9,12 @@ class Ledger < ApplicationRecord
         Rails.application.routes.url_helpers.rails_blob_path(image, disposition: "attachment", only_path: true)
     end
 
+    def practitioner
+        self.user.name
+    end
+
+    def practitioner_title
+        self.user.title
+    end
+
 end

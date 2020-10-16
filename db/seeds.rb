@@ -20,12 +20,14 @@ mates.each{|u|Patient.create(name:u, current: false, hospital_patient_id:rand(10
 mates2 = "Holly Bradshaw,Connor Simpson,Tianna Santana,Zion Oconnell,Kassandra Blackwell,Kaia Huber,Dwayne Bowen,Neveah Maynard,Luna Salinas,Cyrus Yang,Julius Kim,Adyson Sherman"
 mates2=mates2.split(",")
 mates2 = mates2.each{|u|Patient.create(name:u, current: true, hospital_patient_id:rand(1000..9999))}
-sick= Patient.current_patients
+# sick= Patient.current_patients
 
 
-sick.each do |patient|
-    Ledger.create(user_id:User.all.sample.id, patient_id:patient.id,current_room:303,description:"after bleech, the patients seems to show signs of recover")
-end
+# sick.each do |patient|
+#     5.times do 
+#         Ledger.create(user_id:User.all.sample.id, patient_id:patient.id,current_room:303,description:"after bleech, the patients seems to show signs of recover")
+#     end
+# end
 
 # 10.times do 
 #     patient =Patient.all.sample
