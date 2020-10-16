@@ -1,5 +1,6 @@
 class LedgerSerializer < ActiveModel::Serializer
-  attributes :id, :current_room, :description, :created_at, :user 
+  include Rails.application.routes.url_helpers
+  attributes :id, :current_room, :description, :main_image, :created_at, :user 
   
   belongs_to :user
   belongs_to :patient
