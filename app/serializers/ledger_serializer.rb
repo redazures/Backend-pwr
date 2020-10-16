@@ -8,7 +8,7 @@ class LedgerSerializer < ActiveModel::Serializer
   def main_image
     if object.main_image.attached?
       {
-        url: rails_blob_url(object.main_image)
+        url: rails_blob_path(object.main_image)
       }
     end
   end
