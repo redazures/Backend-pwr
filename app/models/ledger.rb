@@ -20,4 +20,8 @@ class Ledger < ApplicationRecord
         self.user.title
     end
 
+    def edit
+        self.updated_at.to_i - self.created_at.to_i > 100 ? true : false
+    end
+
 end
