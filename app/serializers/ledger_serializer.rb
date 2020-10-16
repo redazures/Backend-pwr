@@ -1,14 +1,16 @@
 class LedgerSerializer < ActiveModel::Serializer
-  attributes :id, :current_room, :description, :created_at, :updated_at, :image, :practitioner, :practitioner_title
+  attributes :id, :current_room, :description, :created_at, :updated_at, :practitioner, :practitioner_title, :array_of_images
 
   belongs_to :user
   belongs_to :patient
 
-  def image
-    if object.main_image.attached?
-      {
-        url: object.image
-      }
-    end
-  end
+  # def array_images
+  #   if object.images.attached?
+  #         object.images.map do |image|
+  #             {
+  #               url: object.image
+  #             }
+  #         end
+  #   end
+  # end
 end
