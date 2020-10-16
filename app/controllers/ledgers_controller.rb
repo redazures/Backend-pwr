@@ -6,8 +6,9 @@ class LedgersController < ApplicationController
     end
 
     def create
-        # binding.pry
-        ledger = Ledger.create(user_id:User.all.sample.id, patient_id:params[:patient_id],current_room:params[:current_room],description:params[:description])
+        binding.pry
+        ledger = Ledger.create(user_id:User.all.sample.id, patient_id:params[:patient_id],current_room:params[:current_room],description:params[:description] )
+        ledger = Ledger.create(user_id:User.all.sample.id, patient_id:51,current_room:params[:current_room],description:params[:description], main_image:params["images"])
         render json:ledger
     end
 
@@ -19,8 +20,9 @@ class LedgersController < ApplicationController
     end
 
     def destroy
-        binding
         ledger = Ledger.find(params[:id])
         ledger.destroy
     end
+
+    
 end
