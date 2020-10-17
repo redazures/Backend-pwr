@@ -44,3 +44,4 @@ gem 'active_model_serializers', '~> 0.10.0'
 gem 'pry'
 gem "aws-sdk-s3", require: false
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
+
