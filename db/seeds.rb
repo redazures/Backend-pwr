@@ -17,9 +17,9 @@ User.create(name: "Coco", title:"Therapist", email:"coco@gmail.com",password:"12
 # mates=mates.split(",")
 # mates.each{|u|Patient.create(name:u, current: false, hospital_patient_id:rand(1000..9999))}
 
-# mates2 = "Holly Bradshaw,Connor Simpson,Tianna Santana,Zion Oconnell,Kassandra Blackwell,Kaia Huber,Dwayne Bowen,Neveah Maynard,Luna Salinas,Cyrus Yang,Julius Kim,Adyson Sherman"
-# mates2=mates2.split(",")
-# mates2 = mates2.each{|u|Patient.create(name:u, current: true, hospital_patient_id:rand(1000..9999))}
+mates2 = "Holly Bradshaw,Connor Simpson,Tianna Santana,Zion Oconnell,Kassandra Blackwell,Kaia Huber,Dwayne Bowen,Neveah Maynard,Luna Salinas,Cyrus Yang,Julius Kim,Adyson Sherman"
+mates2=mates2.split(",")
+mates2 = mates2.each{|u|Patient.create(name:u, current: true, hospital_patient_id:rand(1000..9999))}
 # sick= Patient.current_patients
 
 

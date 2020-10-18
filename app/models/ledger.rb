@@ -24,4 +24,8 @@ class Ledger < ApplicationRecord
         self.updated_at.to_i - self.created_at.to_i > 100 ? true : false
     end
 
+    def self.clear_pics
+        ActiveStorage::Attachment.all.each { |attachment| attachment.purge }
+    end
+
 end

@@ -9,6 +9,9 @@ class LedgersController < ApplicationController
         # binding.pry
         ledger = Ledger.create(user_id:User.all.sample.id, patient_id:params[:patient_id],current_room:params[:current_room],description:params[:description] )
         # ledger = Ledger.create(user_id:User.all.sample.id, patient_id:51,current_room:params[:current_room],description:params[:description], main_image:params["images"])
+        params["images"].each do |image|
+            ledger.images.attach(image)
+        end
         render json:ledger
     end
 
