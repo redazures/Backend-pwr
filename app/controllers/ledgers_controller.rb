@@ -1,5 +1,4 @@
 class LedgersController < ApplicationController
-    include Rails.application.routes.url_helpers
 
     def index
         ledgers = Ledger.all
