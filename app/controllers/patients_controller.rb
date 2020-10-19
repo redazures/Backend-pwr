@@ -2,8 +2,7 @@ class PatientsController < ApplicationController
     
     def index
         patients = Patient.current_patients
-
-        render json:patients
+        render json: patients
     end
 
     def create
