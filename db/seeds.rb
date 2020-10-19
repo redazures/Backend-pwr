@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # require 'pry'
 
-User.create(name: "Cindy", title:"Doctor", email:"cindy@gmail.com",password:"12345",employee_id:rand(1000...9999))
-User.create(name: "Rosanna", title:"Registered Nurse", email:"roro@gmail.com",password:"12345",employee_id:rand(1000...9999))
-User.create(name: "Coco", title:"Therapist", email:"coco@gmail.com",password:"12345",employee_id:rand(1000...9999))
+# User.create(name: "Cindy", title:"Doctor", email:"cindy@gmail.com",password:"12345",employee_id:rand(1000...9999),cell:6468535914)
+# User.create(name: "Rosanna", title:"Registered Nurse", email:"roro@gmail.com",password:"12345",employee_id:rand(1000...9999),cell:6468535914)
+# User.create(name: "Coco", title:"Therapist", email:"coco@gmail.com",password:"12345",employee_id:rand(1000...9999),cell:6468535914)
 # User.create(name: "Kevin", title:"Analyst and Therapist", email:"KevX@gmail.com", password:"12345",employee_id:rand(1000...9999))
 # User.create(name: "Stan", title:"Nurse", email:"Stanley@gmail.com",password:"12345",employee_id:rand(1000...9999))
 
@@ -24,7 +24,7 @@ User.create(name: "Coco", title:"Therapist", email:"coco@gmail.com",password:"12
 
 
 # sick.each do |patient|
-#     5.times do 
+#     2.times do 
 #         Ledger.create(user_id:User.all.sample.id, patient_id:patient.id,current_room:303,description:"after bleech, the patients seems to show signs of recover")
 #     end
 # end

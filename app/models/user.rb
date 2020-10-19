@@ -1,6 +1,9 @@
 class User < ApplicationRecord
     has_many :ledgers
     has_many :patients, through: :ledgers
+    has_secure_password
+    validates :email, uniqueness: true
+
 
     has_many :sender_messages, foreign_key: :recipient_id, class_name: "Message"
     has_many :senders, through: :sender_messages, source: :sender
