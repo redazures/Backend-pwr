@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  post '/login', to: 'auth#create'
+  get '/profile', to: 'users#profile'
+
   resources :messages
   resources :patients
   resources :ledgers

@@ -1,4 +1,5 @@
 class LedgersController < ApplicationController
+    skip_before_action :authorized, except: [:index]
 
     def index
         ledgers = Ledger.all
