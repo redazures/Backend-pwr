@@ -13,6 +13,7 @@ class ApplicationController < ActionController::API
         # binding.pry
         if params["headers"]
             token = params["headers"].split(' ')[1]
+            # token = params["headers"]["Authorization"].split(' ')[1] if params["headers"]["Authorization"]
             begin
                 JWT.decode(token, '3lite/-\\/\/350/\/\3', true, algorithm: 'HS256')
             rescue JWT::DecodeError

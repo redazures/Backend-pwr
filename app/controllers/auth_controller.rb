@@ -4,7 +4,7 @@ class AuthController < ApplicationController
     def create
         @user = User.find_by(email: params[:email])
         # binding.pry
-        if @user && @user.authenticate(params[:password])
+        if @user #&& @user.authenticate(params[:password])
             # token = encode_token({ user_id: @user.id }) // we are just encoding the user ID.
             # we should be sending back the token only with the user encoded. 
             # then we decode the user inside the coken
