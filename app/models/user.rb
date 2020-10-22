@@ -24,10 +24,12 @@ class User < ApplicationRecord
     end
 
     def all_messages
-        senders= self.sender_messages.map{|mess|mess.sender_id}
-        recipients = self.recipient_messages.map{|mess|mess.recipient_id}
-        correspondence= senders + recipients
-        correspondence = correspondence.uniq
+        # senders= self.sender_messages.map{|mess|mess.sender_id}
+        # recipients = self.recipient_messages.map{|mess|mess.recipient_id}
+        # correspondence= senders + recipients
+        # correspondence = correspondence.uniq
+        # Users.all
+        correspondence =  User.all.sort_by{|x|x.name}.map{|x|x.id}.select{|x|x!=self.id}
         correspondence.map do |id|
             {
                 correspondent: {id:User.find(id).id,name:User.find(id).name},

@@ -1,7 +1,8 @@
 class PatientsController < ApplicationController
-    
+    skip_before_action :authorized, only: [:index, :create]
+
     def index
-        patients = Patient.current_patients
+        patients = Patient.current_patients.sort_by{|x|x.name}
         render json: patients
     end
 
