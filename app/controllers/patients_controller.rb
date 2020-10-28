@@ -8,7 +8,7 @@ class PatientsController < ApplicationController
 
     def create
         # binding.pry
-        patient = Patient.create(name:params["name"],current:true,hospital_patient_id:params["patient_id"])
+        patient = Patient.create(name:params["name"],current:true,hospital_patient_id:params["hospital_patient_id"])
         ledger = Ledger.create(user_id:User.all.sample.id, patient_id:patient.id,current_room:params["room"],description:params["description"])
         # params["images"].each{|image|ledger.images.attach(image)}
         params["images"].each do |image|
