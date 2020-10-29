@@ -9,6 +9,9 @@ Running this backend, getting the localhost id for the front end, and running th
 
 Please read the front end of the application on how to get the data from the rails server.
 
+Please note that this is the front end of the application:
+https://github.com/redazures/Mod5-PWR-Front
+
 Thank you for reading this readme.
 
 Best Regards,
