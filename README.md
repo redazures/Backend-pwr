@@ -1,25 +1,16 @@
-# README - adding something
+Hello,
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the back end of a React Native Front end.
+Please check out the following link for a video demo:
+https://www.loom.com/share/63272b1563624b8e96c413eb1918cd0e.
 
-Things you may want to cover:
+The front end of the application will need this back end to run.
+Running this backend, getting the localhost id for the front end, and running the front end should run the application smoothly.
 
-* Ruby version
+Please read the front end of the application on how to get the data from the rails server.
 
-* System dependencies
+Thank you for reading this readme.
 
-* Configuration
+Best Regards,
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# Backend-pwr
+James Wu
